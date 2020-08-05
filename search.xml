@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>我的第一个博客</title>
+    <url>/2020/08/05/hello-world/</url>
+    <content><![CDATA[<p>这是我的第一篇博客。<br>在此站中我将分享一些工作学习中积累的知识，敬请期待~~</p>
+]]></content>
+      <categories>
+        <category>随便讲讲</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+</search>
