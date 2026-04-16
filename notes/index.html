@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="知识库分类页，按分类卡片整理专题资料和知识条目入口。" />
+    <title>知识库 | 罗辑的个人工作台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23e9544f'/%3E%3Cpath d='M18 18h10l6 14 6-14h10v28h-8V29l-6 17h-4l-6-17v17h-8z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="../styles.css?v=20260416-notes13" />
+  </head>
+  <body class="notes-page">
+    <header class="topbar" aria-label="站点导航">
+      <a class="brand" href="../" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>个人工作台</span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="../#workspace">工作区</a>
+        <a href="../agent/">Agent 路线</a>
+        <a href="../notes/" aria-current="page">知识库</a>
+        <a href="../toolbox/">工具箱</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../">返回首页</a>
+          <p class="eyebrow">知识库首页</p>
+          <h1>知识库</h1>
+          <p>先做成干净的分类首页。按分类进去看资料，别在这一页堆太多说明和条目。</p>
+          <div class="intro-actions">
+            <a class="button primary" href="#categories">查看分类</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section light-section" id="categories" aria-labelledby="categories-title">
+        <div class="section-heading">
+          <p class="eyebrow">分类目录</p>
+          <h2 id="categories-title">按分类看</h2>
+          <p>现在可以按专题进，也可以按分类进。首页只保留入口，不在这里堆正文。</p>
+        </div>
+        <div class="topic-grid">
+          <a class="topic-card" href="./agent/">
+            <span class="article-label">专题资料</span>
+            <h3>Agent 专题</h3>
+            <p>当前收录的资料先都放在这里，作为第一批专题内容。</p>
+            <div class="card-meta">
+              <span>21 篇资料</span>
+              <span>已整理</span>
+            </div>
+          </a>
+          <a class="topic-card" href="./basic/">
+            <span class="article-label">分类目录</span>
+            <h3>基础工程</h3>
+            <p>CLI、配置、装配、生命周期这些基础知识，后面会继续拆得更清楚。</p>
+            <div class="card-meta">
+              <span>6 篇资料</span>
+              <span>独立目录</span>
+            </div>
+          </a>
+          <a class="topic-card" href="./evolution/">
+            <span class="article-label">分类目录</span>
+            <h3>架构演进</h3>
+            <p>运行时（Runtime）、规划（Planning）、快照（Snapshot）、重规划（Replanner）这些演进类内容，后面单独归档。</p>
+            <div class="card-meta">
+              <span>7 篇资料</span>
+              <span>独立目录</span>
+            </div>
+          </a>
+          <a class="topic-card" href="./patterns/">
+            <span class="article-label">分类目录</span>
+            <h3>设计模式</h3>
+            <p>工厂模式（Factory）、状态机（State Machine）、存储（Store）、注册表（Registry）这些模式类内容，后面单独归档。</p>
+            <div class="card-meta">
+              <span>8 篇资料</span>
+              <span>独立目录</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>知识库</p>
+      <a href="../">回到首页</a>
+    </footer>
+
+    <script src="../script.js?v=20260416-notes13"></script>
+  </body>
+</html>

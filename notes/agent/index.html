@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN" data-content-version="20260416-boundary7">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Agent 专题资料目录，作为知识库中的一个独立专题资料区，按条目读取 Markdown 内容。" />
+    <title>Agent 专题资料目录 | 罗辑的个人工作台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23e9544f'/%3E%3Cpath d='M18 18h10l6 14 6-14h10v28h-8V29l-6 17h-4l-6-17v17h-8z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="../../styles.css?v=20260416-boundary7" />
+  </head>
+  <body class="notes-page knowledge-page">
+    <header class="topbar" aria-label="站点导航">
+      <a class="brand" href="../../" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>个人工作台</span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="../../#workspace">工作区</a>
+        <a href="../../agent/">Agent 工作区</a>
+        <a href="../../notes/" aria-current="page">知识库</a>
+        <a href="../../toolbox/">工具箱</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero compact-hero">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../">返回知识库首页</a>
+          <p class="eyebrow">Knowledge Library</p>
+          <h1>Agent 专题资料目录</h1>
+          <p>
+            这里不再把内容硬塞进页面里。知识点已经拆成文件存储，目录页只读取
+            <code>content/knowledge/manifest.json</code> 来渲染索引。
+          </p>
+        </div>
+        <aside class="status-panel page-status" aria-label="知识点状态">
+          <div>
+            <span class="status-label">存储方式</span>
+            <strong>Markdown 文件</strong>
+          </div>
+          <div>
+            <span class="status-label">渲染方式</span>
+            <strong>页面运行时读取</strong>
+          </div>
+          <div>
+            <span class="status-label">详情形态</span>
+            <strong>单篇独立页</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page-section" id="index" aria-labelledby="index-title">
+        <div class="section-heading">
+          <p class="eyebrow">Index</p>
+          <h2 id="index-title">点击标题进入单篇详情</h2>
+          <p>
+            目录页只负责列出标题和摘要。每篇知识点都进入独立页面，再去读取对应的
+            <code>.md</code> 文件解析展示。
+          </p>
+        </div>
+        <div class="knowledge-index" data-knowledge-index>
+          <article class="knowledge-loading">
+            <h3>正在读取知识点目录</h3>
+            <p>稍等一下，页面正在从文件清单里加载内容。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Agent 专题资料目录</p>
+      <a href="../">回到知识库首页</a>
+    </footer>
+
+    <script src="../../script.js?v=20260416-boundary7"></script>
+    <script src="../../content-pages.js?v=20260416-boundary7"></script>
+    <script>
+      window.ContentPages?.initKnowledgeIndexPage({
+        manifestUrl: "/content/knowledge/manifest.json",
+        containerSelector: "[data-knowledge-index]",
+      });
+    </script>
+  </body>
+</html>
+

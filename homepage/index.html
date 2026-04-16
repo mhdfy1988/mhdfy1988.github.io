@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="个人主页重构工作区，记录首页收口、多页面拆分、知识库分类化和后续真实数据接入。"
+    />
+    <title>个人主页重构 | 罗辑的个人工作台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23e9544f'/%3E%3Cpath d='M18 18h10l6 14 6-14h10v28h-8V29l-6 17h-4l-6-17v17h-8z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="../styles.css?v=20260416-homepage15" />
+  </head>
+  <body class="homepage-page">
+    <header class="topbar" aria-label="站点导航">
+      <a class="brand" href="../" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>个人工作台</span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="../#workspace">工作区</a>
+        <a href="../agent/">Agent 路线</a>
+        <a href="../notes/">知识库</a>
+        <a href="../toolbox/">工具箱</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../">返回首页</a>
+          <p class="eyebrow">Project Workspace</p>
+          <h1>个人主页重构</h1>
+          <p>
+            这里记录本站从单页展示改造成多页面工作台的实际进度。首页、专题工作区、知识库分类页已经拆开，接下来主要补真实内容和自动数据。
+          </p>
+          <div class="intro-actions">
+            <a class="button primary" href="#plan">看当前进度</a>
+            <a class="button secondary" href="#decisions">看关键决策</a>
+          </div>
+        </div>
+        <aside class="status-panel page-status" aria-label="项目状态">
+          <div>
+            <span class="status-label">当前版本</span>
+            <strong>多页面工作台</strong>
+          </div>
+          <div>
+            <span class="status-label">完成度</span>
+            <strong>60%</strong>
+          </div>
+          <div>
+            <span class="status-label">下一步</span>
+            <strong>接入真实内容与自动数据</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page-section" id="plan" aria-labelledby="plan-title">
+        <div class="section-heading">
+          <p class="eyebrow">Current Progress</p>
+          <h2 id="plan-title">当前进度</h2>
+          <p>这一轮已经把结构边界收顺了，后面重点不再是“怎么拆”，而是把空壳换成真实材料。</p>
+        </div>
+        <div class="topic-grid">
+          <article class="topic-card">
+            <span class="article-label">已完成</span>
+            <h3>首页收口成总控台</h3>
+            <p>首页现在只保留工作区卡片和状态总览，不再堆独立的实验区和知识区块。</p>
+          </article>
+          <article class="topic-card">
+            <span class="article-label">已完成</span>
+            <h3>工作区和知识库拆开</h3>
+            <p><code>agent/</code> 只讲路线和推进，<code>notes/</code> 只讲资料和索引，路径和职责都分开了。</p>
+          </article>
+          <article class="topic-card">
+            <span class="article-label">已完成</span>
+            <h3>知识库改成分类目录</h3>
+            <p>知识库首页已经收成分类卡片，`基础工程`、`架构演进`、`设计模式` 都有自己的独立目录页。</p>
+          </article>
+          <article class="topic-card">
+            <span class="article-label">进行中</span>
+            <h3>补真实内容与自动数据</h3>
+            <p>下一步把真实项目记录、仓库链接、学习进度和自动生成的数据接进来，让这个站点开始自己长内容。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section light-section" id="decisions" aria-labelledby="decisions-title">
+        <div class="notes-header">
+          <div>
+            <p class="eyebrow">Design Notes</p>
+            <h2 id="decisions-title">设计决策</h2>
+          </div>
+          <p>这些不是抽象想法，而是这轮已经收敛下来的结构口径，后面改版时直接按这个边界继续做。</p>
+        </div>
+        <div class="note-list">
+          <article class="note-item">
+            <time datetime="2026-04-16">已落地 01</time>
+            <h3>首页只做总控台</h3>
+            <p>首页负责入口和总览，真正要看的内容都进入独立目录页，不再在首页来回拼块。</p>
+          </article>
+          <article class="note-item">
+            <time datetime="2026-04-16">已落地 02</time>
+            <h3>专题工作区和知识库物理分开</h3>
+            <p>专题推进留在工作区，知识正文留在知识库子目录，避免页面职责混在一起。</p>
+          </article>
+          <article class="note-item">
+            <time datetime="2026-04-16">已落地 03</time>
+            <h3>分类页只做入口，正文只保留一份</h3>
+            <p>分类目录页不复制文章正文，只复用现有资料页链接，后面改标题和摘要时不会改出多份。</p>
+          </article>
+          <article class="note-item">
+            <time datetime="2026-04-16">下一轮 04</time>
+            <h3>继续保持先静态后动态</h3>
+            <p>先把真实内容填进来，再接 GitHub 提交、文章索引和本地生成数据，保持 GitHub Pages 这条路简单稳定。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>个人主页重构工作区</p>
+      <a href="../">回到首页</a>
+    </footer>
+
+    <script src="../script.js?v=20260416-homepage15"></script>
+  </body>
+</html>

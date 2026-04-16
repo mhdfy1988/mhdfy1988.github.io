@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="自动化工具箱工作区，整理脚本、流程和本地工具。" />
+    <title>自动化工具箱 | 罗辑的个人工作台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23e9544f'/%3E%3Cpath d='M18 18h10l6 14 6-14h10v28h-8V29l-6 17h-4l-6-17v17h-8z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="../styles.css?v=20260416-agent4" />
+  </head>
+  <body class="toolbox-page">
+    <header class="topbar" aria-label="站点导航">
+      <a class="brand" href="../" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>个人工作台</span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="../#workspace">工作区</a>
+        <a href="../agent/">Agent 路线</a>
+        <a href="../notes/">知识库</a>
+        <a href="../toolbox/" aria-current="page">工具箱</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../">返回首页</a>
+          <p class="eyebrow">Toolkit Workspace</p>
+          <h1>自动化工具箱</h1>
+          <p>这里整理常用脚本、报表处理、笔记同步和本地工作流。重点是能复现、能说明输入输出、能验证结果。</p>
+          <div class="intro-actions">
+            <a class="button primary" href="#tools">查看工具清单</a>
+            <a class="button secondary" href="#rules">查看使用规则</a>
+          </div>
+        </div>
+        <aside class="status-panel page-status" aria-label="工具箱状态">
+          <div>
+            <span class="status-label">当前状态</span>
+            <strong>待整理</strong>
+          </div>
+          <div>
+            <span class="status-label">优先级</span>
+            <strong>报表与笔记流程</strong>
+          </div>
+          <div>
+            <span class="status-label">下一步</span>
+            <strong>补脚本说明</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page-section" id="tools" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <p class="eyebrow">Tool List</p>
+          <h2 id="tools-title">工具清单</h2>
+          <p>先把常用入口列出来，再逐个补运行方式和验证方式。</p>
+        </div>
+        <div class="topic-grid">
+          <article class="topic-card">
+            <h3>报表整理</h3>
+            <p>月报、日报、Excel 处理、文件归档这些固定流程放在这里。</p>
+          </article>
+          <article class="topic-card">
+            <h3>笔记同步</h3>
+            <p>有道云笔记保存、重建替换、图片转存和内容检查流程。</p>
+          </article>
+          <article class="topic-card">
+            <h3>站点维护</h3>
+            <p>本地预览、链接检查、图片验证、GitHub Pages 发布前检查。</p>
+          </article>
+          <article class="topic-card">
+            <h3>学习辅助</h3>
+            <p>源码阅读、术语抽取、路线图生成和阶段复盘模板。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section light-section" id="rules" aria-labelledby="rules-title">
+        <div class="notes-header">
+          <div>
+            <p class="eyebrow">Runbook</p>
+            <h2 id="rules-title">每个工具都要写清楚</h2>
+          </div>
+          <p>工具不是堆命令，最好都能说明什么时候用、输入是什么、输出在哪里、怎么确认成功。</p>
+        </div>
+        <div class="rule-strip">
+          <span>使用场景</span>
+          <span>输入参数</span>
+          <span>输出文件</span>
+          <span>验证方式</span>
+          <span>失败处理</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>自动化工具箱工作区</p>
+      <a href="../">回到首页</a>
+    </footer>
+
+    <script src="../script.js?v=20260416-agent4"></script>
+  </body>
+</html>

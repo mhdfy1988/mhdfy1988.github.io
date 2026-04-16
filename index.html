@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="罗辑的个人工作台，按独立工作区记录学习、项目、笔记和工具。" />
+    <title>罗辑的个人工作台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23e9544f'/%3E%3Cpath d='M18 18h10l6 14 6-14h10v28h-8V29l-6 17h-4l-6-17v17h-8z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./styles.css?v=20260416-home8" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="站点导航">
+      <a class="brand" href="./" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>个人工作台</span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="#workspace">工作区</a>
+        <a href="./agent/">Agent 路线</a>
+        <a href="./notes/">知识库</a>
+        <a href="./toolbox/">工具箱</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro-shell" aria-labelledby="intro-title">
+        <div class="intro-image" aria-hidden="true"></div>
+        <div class="intro-content">
+          <p class="eyebrow">Workspace Home</p>
+          <h1 id="intro-title">把学习、项目和想法分成一个个能点进去的工作区。</h1>
+          <p class="intro-copy">
+            首页只负责导航和状态总览。每张卡片都会进入独立页面，里面放路线图、阶段工作、知识点整理、复盘和真实链接。
+          </p>
+          <div class="intro-actions">
+            <a class="button primary" href="./agent/">打开 Agent 学习工作区</a>
+            <a class="button secondary" href="#workspace">查看全部工作区</a>
+          </div>
+        </div>
+        <aside class="status-panel" aria-label="当前状态">
+          <div>
+            <span class="status-label">主页形态</span>
+            <strong>多页面工作台</strong>
+          </div>
+          <div>
+            <span class="status-label">当前聚焦</span>
+            <strong>Harness Agent Lab</strong>
+          </div>
+          <div>
+            <span class="status-label">下一步</span>
+            <strong>V4 多 Agent 协作</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="workspace-section" id="workspace" aria-labelledby="workspace-title">
+        <div class="section-heading">
+          <p class="eyebrow">Workspace Cards</p>
+          <h2 id="workspace-title">选择一个工作区</h2>
+          <p>
+            这里像桌面上的项目文件夹。卡片不是弹窗，也不是同页切换，而是进入对应的独立页面。
+          </p>
+        </div>
+
+        <div class="workspace-controls" aria-label="卡片筛选">
+          <button class="chip is-active" data-filter="all" type="button">全部</button>
+          <button class="chip" data-filter="learning" type="button">学习</button>
+          <button class="chip" data-filter="project" type="button">项目</button>
+          <button class="chip" data-filter="writing" type="button">沉淀</button>
+        </div>
+
+        <div class="card-grid" aria-label="工作空间卡片">
+          <a class="workspace-card is-featured" data-type="learning" href="./agent/">
+            <img
+              src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
+              alt="屏幕上显示代码的开发环境"
+            />
+            <span class="open-cue">进入工作区</span>
+            <div class="card-body">
+              <span class="card-tag">Learning</span>
+              <h3>Agent 架构实验</h3>
+              <p>记录从 CLI、Config、Runtime 到 Planning、TaskSnapshot、Orchestrator、Replanner 的完整演进。</p>
+              <div class="card-meta">
+                <span>V3 已完成</span>
+                <span>21 篇知识点</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="workspace-card" data-type="project" href="./homepage/">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+              alt="桌面上的笔记本电脑和代码编辑器"
+            />
+            <span class="open-cue">进入工作区</span>
+            <div class="card-body">
+              <span class="card-tag">Project</span>
+              <h3>个人主页重构</h3>
+              <p>记录这个 GitHub Pages 如何从展示页变成持续生长的个人工作台。</p>
+              <div class="card-meta">
+                <span>站点工程</span>
+                <span>刚启动</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="workspace-card" data-type="writing" href="./notes/">
+            <img
+              src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
+              alt="桌面上展开的笔记本和书写工具"
+            />
+            <span class="open-cue">进入工作区</span>
+            <div class="card-body">
+              <span class="card-tag">Writing</span>
+              <h3>知识点整理</h3>
+              <p>把零散问题整理成术语表、流程图、踩坑记录和可复用模板。</p>
+              <div class="card-meta">
+                <span>笔记流</span>
+                <span>持续补</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="workspace-card" data-type="project" href="./toolbox/">
+            <img
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
+              alt="深色代码编辑器中的函数代码"
+            />
+            <span class="open-cue">进入工作区</span>
+            <div class="card-body">
+              <span class="card-tag">Toolkit</span>
+              <h3>自动化工具箱</h3>
+              <p>沉淀常用脚本、报表处理、笔记同步和本地工作流。</p>
+              <div class="card-meta">
+                <span>脚本</span>
+                <span>待整理</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>持续整理，持续开工。照片来自 Unsplash。</p>
+      <a href="#top">回到顶部</a>
+    </footer>
+
+    <script src="./script.js?v=20260416-home8"></script>
+  </body>
+</html>
