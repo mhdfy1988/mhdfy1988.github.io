@@ -1,212 +1,302 @@
 [
-    {
-        "slug":  "basic-01-node-cli-bin",
-        "fileName":  "basic-01-node-cli-bin.md",
-        "title":  "知识点-01 - Node CLI 入口与 bin 机制",
-        "summary":  "Node CLI 的本质不是“某个文件自动执行”，而是：",
-        "group":  "基础工程知识点",
-        "order":  1,
-        "contentUrl":  "/content/knowledge/basic-01-node-cli-bin.md",
-        "pageUrl":  "/notes/agent/basic-01-node-cli-bin/"
-    },
-    {
-        "slug":  "basic-02-config-priority-deep-merge",
-        "fileName":  "basic-02-config-priority-deep-merge.md",
-        "title":  "知识点-02 - 配置优先级与深合并",
-        "summary":  "配置系统不是简单地“读一个 JSON 文件”。成熟一点的配置系统至少要回答四个问题：",
-        "group":  "基础工程知识点",
-        "order":  2,
-        "contentUrl":  "/content/knowledge/basic-02-config-priority-deep-merge.md",
-        "pageUrl":  "/notes/agent/basic-02-config-priority-deep-merge/"
-    },
-    {
-        "slug":  "basic-03-composition-root",
-        "fileName":  "basic-03-composition-root.md",
-        "title":  "知识点-03 - 装配根 Composition Root",
-        "summary":  "装配根（Composition Root）是系统里集中创建对象、连接依赖的地方。",
-        "group":  "基础工程知识点",
-        "order":  3,
-        "contentUrl":  "/content/knowledge/basic-03-composition-root.md",
-        "pageUrl":  "/notes/agent/basic-03-composition-root/"
-    },
-    {
-        "slug":  "basic-04-lifecycle-state-machine",
-        "fileName":  "basic-04-lifecycle-state-machine.md",
-        "title":  "知识点-04 - 生命周期状态机设计",
-        "summary":  "生命周期状态机回答的是：",
-        "group":  "基础工程知识点",
-        "order":  4,
-        "contentUrl":  "/content/knowledge/basic-04-lifecycle-state-machine.md",
-        "pageUrl":  "/notes/agent/basic-04-lifecycle-state-machine/"
-    },
-    {
-        "slug":  "basic-05-start-failure-rollback",
-        "fileName":  "basic-05-start-failure-rollback.md",
-        "title":  "知识点-05 - 启动失败回滚机制",
-        "summary":  "启动失败回滚机制回答的是：",
-        "group":  "基础工程知识点",
-        "order":  5,
-        "contentUrl":  "/content/knowledge/basic-05-start-failure-rollback.md",
-        "pageUrl":  "/notes/agent/basic-05-start-failure-rollback/"
-    },
-    {
-        "slug":  "basic-06-factory-injection-fake-test",
-        "fileName":  "basic-06-factory-injection-fake-test.md",
-        "title":  "知识点-06 - 工厂注入与 Fake 测试",
-        "summary":  "工厂注入让复杂系统可以在测试里替换关键组件。",
-        "group":  "基础工程知识点",
-        "order":  6,
-        "contentUrl":  "/content/knowledge/basic-06-factory-injection-fake-test.md",
-        "pageUrl":  "/notes/agent/basic-06-factory-injection-fake-test/"
-    },
-    {
-        "slug":  "01-agentloop-core-boundary",
-        "fileName":  "01-agentloop-core-boundary.md",
-        "title":  "01 - AgentLoop 内核边界",
-        "summary":  "`AgentLoop` 是单轮执行内核，不是整个 Agent 系统。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  101,
-        "contentUrl":  "/content/knowledge/01-agentloop-core-boundary.md",
-        "pageUrl":  "/notes/agent/01-agentloop-core-boundary/"
-    },
-    {
-        "slug":  "02-runtime-composition-root",
-        "fileName":  "02-runtime-composition-root.md",
-        "title":  "02 - Runtime 组合根与生命周期",
-        "summary":  "Runtime 是系统装配层，也是外部入口理解内部系统的第一层门面。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  102,
-        "contentUrl":  "/content/knowledge/02-runtime-composition-root.md",
-        "pageUrl":  "/notes/agent/02-runtime-composition-root/"
-    },
-    {
-        "slug":  "03-runtime-factory-pattern",
-        "fileName":  "03-runtime-factory-pattern.md",
-        "title":  "03 - Factory 工厂模式在 Runtime 中的用法",
-        "summary":  "工厂模式让 Runtime 不直接绑定具体实现，而是通过 `createXxx(...)` 创建组件。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  103,
-        "contentUrl":  "/content/knowledge/03-runtime-factory-pattern.md",
-        "pageUrl":  "/notes/agent/03-runtime-factory-pattern/"
-    },
-    {
-        "slug":  "04-taskplan-vs-tasksnapshot",
-        "fileName":  "04-taskplan-vs-tasksnapshot.md",
-        "title":  "04 - TaskPlan 与 TaskSnapshot 的分离",
-        "summary":  "`TaskPlan` 是静态计划，`TaskSnapshot` 是动态执行态。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  104,
-        "contentUrl":  "/content/knowledge/04-taskplan-vs-tasksnapshot.md",
-        "pageUrl":  "/notes/agent/04-taskplan-vs-tasksnapshot/"
-    },
-    {
-        "slug":  "05-task-orchestrator",
-        "fileName":  "05-task-orchestrator.md",
-        "title":  "05 - TaskOrchestrator 编排器",
-        "summary":  "`TaskOrchestrator` 是任务推进器。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  105,
-        "contentUrl":  "/content/knowledge/05-task-orchestrator.md",
-        "pageUrl":  "/notes/agent/05-task-orchestrator/"
-    },
-    {
-        "slug":  "06-state-machine-pattern",
-        "fileName":  "06-state-machine-pattern.md",
-        "title":  "06 - 状态机模式",
-        "summary":  "状态机模式把系统可能处于的状态，以及状态之间允许怎样转换，显式表达出来。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  106,
-        "contentUrl":  "/content/knowledge/06-state-machine-pattern.md",
-        "pageUrl":  "/notes/agent/06-state-machine-pattern/"
-    },
-    {
-        "slug":  "07-store-pattern",
-        "fileName":  "07-store-pattern.md",
-        "title":  "07 - Store 仓储模式",
-        "summary":  "Store 仓储模式把“状态怎么用”和“状态存在哪里”分开。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  107,
-        "contentUrl":  "/content/knowledge/07-store-pattern.md",
-        "pageUrl":  "/notes/agent/07-store-pattern/"
-    },
-    {
-        "slug":  "08-memento-snapshot-pattern",
-        "fileName":  "08-memento-snapshot-pattern.md",
-        "title":  "08 - Memento 备忘录模式",
-        "summary":  "备忘录模式（Memento Pattern）保存对象在某一刻的状态，用于恢复、回看或审计。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  108,
-        "contentUrl":  "/content/knowledge/08-memento-snapshot-pattern.md",
-        "pageUrl":  "/notes/agent/08-memento-snapshot-pattern/"
-    },
-    {
-        "slug":  "09-structured-task-result-protocol",
-        "fileName":  "09-structured-task-result-protocol.md",
-        "title":  "09 - 结构化任务结果协议",
-        "summary":  "结构化任务结果协议解决的是：",
-        "group":  "AgentLoop 进化知识点",
-        "order":  109,
-        "contentUrl":  "/content/knowledge/09-structured-task-result-protocol.md",
-        "pageUrl":  "/notes/agent/09-structured-task-result-protocol/"
-    },
-    {
-        "slug":  "10-replanner-revision",
-        "fileName":  "10-replanner-revision.md",
-        "title":  "10 - Replanner 修订机制",
-        "summary":  "`Replanner` 负责在计划执行受阻时，基于当前执行态生成新的计划 revision。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  110,
-        "contentUrl":  "/content/knowledge/10-replanner-revision.md",
-        "pageUrl":  "/notes/agent/10-replanner-revision/"
-    },
-    {
-        "slug":  "11-history-archive-restore",
-        "fileName":  "11-history-archive-restore.md",
-        "title":  "11 - History / Archive / Restore 任务历史设计",
-        "summary":  "任务历史系统把“当前正在推进的计划”和“已经收起来的历史计划”分开。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  111,
-        "contentUrl":  "/content/knowledge/11-history-archive-restore.md",
-        "pageUrl":  "/notes/agent/11-history-archive-restore/"
-    },
-    {
-        "slug":  "12-registry-pattern",
-        "fileName":  "12-registry-pattern.md",
-        "title":  "12 - Registry 注册表模式",
-        "summary":  "注册表模式（Registry Pattern）负责把能力集中登记起来，再按名称、状态或类别查找和使用。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  112,
-        "contentUrl":  "/content/knowledge/12-registry-pattern.md",
-        "pageUrl":  "/notes/agent/12-registry-pattern/"
-    },
-    {
-        "slug":  "13-hook-event-extension",
-        "fileName":  "13-hook-event-extension.md",
-        "title":  "13 - Hook 事件扩展点",
-        "summary":  "Hook 是事件扩展点。主流程在稳定节点发出事件，外部 handler 可以订阅这些事件做日志、指标、审计、插件扩展等。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  113,
-        "contentUrl":  "/content/knowledge/13-hook-event-extension.md",
-        "pageUrl":  "/notes/agent/13-hook-event-extension/"
-    },
-    {
-        "slug":  "14-adapter-pattern",
-        "fileName":  "14-adapter-pattern.md",
-        "title":  "14 - Adapter 适配器模式",
-        "summary":  "适配器模式（Adapter Pattern）把不同外部协议转换成系统内部统一接口。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  114,
-        "contentUrl":  "/content/knowledge/14-adapter-pattern.md",
-        "pageUrl":  "/notes/agent/14-adapter-pattern/"
-    },
-    {
-        "slug":  "15-runtime-facade-pattern",
-        "fileName":  "15-runtime-facade-pattern.md",
-        "title":  "15 - Facade 门面模式",
-        "summary":  "门面模式（Facade Pattern）给复杂子系统提供一个更简单、稳定的对外入口。",
-        "group":  "AgentLoop 进化知识点",
-        "order":  115,
-        "contentUrl":  "/content/knowledge/15-runtime-facade-pattern.md",
-        "pageUrl":  "/notes/agent/15-runtime-facade-pattern/"
-    }
+  {
+    "slug": "basic-01-node-cli-bin",
+    "fileName": "basic-01-node-cli-bin.md",
+    "title": "知识点-01 - Node CLI 入口与 bin 机制",
+    "summary": "Node CLI 的本质不是“某个文件自动执行”，而是：",
+    "group": "基础工程知识点",
+    "order": 1,
+    "contentUrl": "/content/knowledge/basic-01-node-cli-bin.md",
+    "pageUrl": "/notes/agent/basic-01-node-cli-bin/"
+  },
+  {
+    "slug": "basic-02-config-priority-deep-merge",
+    "fileName": "basic-02-config-priority-deep-merge.md",
+    "title": "知识点-02 - 配置优先级与深合并",
+    "summary": "配置系统不是简单地“读一个 JSON 文件”。成熟一点的配置系统至少要回答四个问题：",
+    "group": "基础工程知识点",
+    "order": 2,
+    "contentUrl": "/content/knowledge/basic-02-config-priority-deep-merge.md",
+    "pageUrl": "/notes/agent/basic-02-config-priority-deep-merge/"
+  },
+  {
+    "slug": "basic-03-composition-root",
+    "fileName": "basic-03-composition-root.md",
+    "title": "知识点-03 - 装配根 Composition Root",
+    "summary": "装配根（Composition Root）是系统里集中创建对象、连接依赖的地方。",
+    "group": "基础工程知识点",
+    "order": 3,
+    "contentUrl": "/content/knowledge/basic-03-composition-root.md",
+    "pageUrl": "/notes/agent/basic-03-composition-root/"
+  },
+  {
+    "slug": "basic-04-lifecycle-state-machine",
+    "fileName": "basic-04-lifecycle-state-machine.md",
+    "title": "知识点-04 - 生命周期状态机设计",
+    "summary": "生命周期状态机回答的是：",
+    "group": "基础工程知识点",
+    "order": 4,
+    "contentUrl": "/content/knowledge/basic-04-lifecycle-state-machine.md",
+    "pageUrl": "/notes/agent/basic-04-lifecycle-state-machine/"
+  },
+  {
+    "slug": "basic-05-start-failure-rollback",
+    "fileName": "basic-05-start-failure-rollback.md",
+    "title": "知识点-05 - 启动失败回滚机制",
+    "summary": "启动失败回滚机制回答的是：",
+    "group": "基础工程知识点",
+    "order": 5,
+    "contentUrl": "/content/knowledge/basic-05-start-failure-rollback.md",
+    "pageUrl": "/notes/agent/basic-05-start-failure-rollback/"
+  },
+  {
+    "slug": "basic-06-factory-injection-fake-test",
+    "fileName": "basic-06-factory-injection-fake-test.md",
+    "title": "知识点-06 - 工厂注入与 Fake 测试",
+    "summary": "工厂注入让复杂系统可以在测试里替换关键组件。",
+    "group": "基础工程知识点",
+    "order": 6,
+    "contentUrl": "/content/knowledge/basic-06-factory-injection-fake-test.md",
+    "pageUrl": "/notes/agent/basic-06-factory-injection-fake-test/"
+  },
+  {
+    "slug": "01-agentloop-core-boundary",
+    "fileName": "01-agentloop-core-boundary.md",
+    "title": "01 - AgentLoop 内核边界",
+    "summary": "`AgentLoop` 是单轮执行内核，不是整个 Agent 系统。",
+    "group": "AgentLoop 进化知识点",
+    "order": 101,
+    "contentUrl": "/content/knowledge/01-agentloop-core-boundary.md",
+    "pageUrl": "/notes/agent/01-agentloop-core-boundary/"
+  },
+  {
+    "slug": "02-runtime-composition-root",
+    "fileName": "02-runtime-composition-root.md",
+    "title": "02 - Runtime 组合根与生命周期",
+    "summary": "Runtime 是系统装配层，也是外部入口理解内部系统的第一层门面。",
+    "group": "AgentLoop 进化知识点",
+    "order": 102,
+    "contentUrl": "/content/knowledge/02-runtime-composition-root.md",
+    "pageUrl": "/notes/agent/02-runtime-composition-root/"
+  },
+  {
+    "slug": "03-runtime-factory-pattern",
+    "fileName": "03-runtime-factory-pattern.md",
+    "title": "03 - Factory 工厂模式在 Runtime 中的用法",
+    "summary": "工厂模式让 Runtime 不直接绑定具体实现，而是通过 `createXxx(...)` 创建组件。",
+    "group": "AgentLoop 进化知识点",
+    "order": 103,
+    "contentUrl": "/content/knowledge/03-runtime-factory-pattern.md",
+    "pageUrl": "/notes/agent/03-runtime-factory-pattern/"
+  },
+  {
+    "slug": "04-taskplan-vs-tasksnapshot",
+    "fileName": "04-taskplan-vs-tasksnapshot.md",
+    "title": "04 - TaskPlan 与 TaskSnapshot 的分离",
+    "summary": "`TaskPlan` 是静态计划，`TaskSnapshot` 是动态执行态。",
+    "group": "AgentLoop 进化知识点",
+    "order": 104,
+    "contentUrl": "/content/knowledge/04-taskplan-vs-tasksnapshot.md",
+    "pageUrl": "/notes/agent/04-taskplan-vs-tasksnapshot/"
+  },
+  {
+    "slug": "05-task-orchestrator",
+    "fileName": "05-task-orchestrator.md",
+    "title": "05 - TaskOrchestrator 编排器",
+    "summary": "`TaskOrchestrator` 是任务推进器。",
+    "group": "AgentLoop 进化知识点",
+    "order": 105,
+    "contentUrl": "/content/knowledge/05-task-orchestrator.md",
+    "pageUrl": "/notes/agent/05-task-orchestrator/"
+  },
+  {
+    "slug": "06-state-machine-pattern",
+    "fileName": "06-state-machine-pattern.md",
+    "title": "06 - 状态机模式",
+    "summary": "状态机模式把系统可能处于的状态，以及状态之间允许怎样转换，显式表达出来。",
+    "group": "AgentLoop 进化知识点",
+    "order": 106,
+    "contentUrl": "/content/knowledge/06-state-machine-pattern.md",
+    "pageUrl": "/notes/agent/06-state-machine-pattern/"
+  },
+  {
+    "slug": "07-store-pattern",
+    "fileName": "07-store-pattern.md",
+    "title": "07 - Store 仓储模式",
+    "summary": "Store 仓储模式把“状态怎么用”和“状态存在哪里”分开。",
+    "group": "AgentLoop 进化知识点",
+    "order": 107,
+    "contentUrl": "/content/knowledge/07-store-pattern.md",
+    "pageUrl": "/notes/agent/07-store-pattern/"
+  },
+  {
+    "slug": "08-memento-snapshot-pattern",
+    "fileName": "08-memento-snapshot-pattern.md",
+    "title": "08 - Memento 备忘录模式",
+    "summary": "备忘录模式（Memento Pattern）保存对象在某一刻的状态，用于恢复、回看或审计。",
+    "group": "AgentLoop 进化知识点",
+    "order": 108,
+    "contentUrl": "/content/knowledge/08-memento-snapshot-pattern.md",
+    "pageUrl": "/notes/agent/08-memento-snapshot-pattern/"
+  },
+  {
+    "slug": "09-structured-task-result-protocol",
+    "fileName": "09-structured-task-result-protocol.md",
+    "title": "09 - 结构化任务结果协议",
+    "summary": "结构化任务结果协议解决的是：",
+    "group": "AgentLoop 进化知识点",
+    "order": 109,
+    "contentUrl": "/content/knowledge/09-structured-task-result-protocol.md",
+    "pageUrl": "/notes/agent/09-structured-task-result-protocol/"
+  },
+  {
+    "slug": "10-replanner-revision",
+    "fileName": "10-replanner-revision.md",
+    "title": "10 - Replanner 修订机制",
+    "summary": "`Replanner` 负责在计划执行受阻时，基于当前执行态生成新的计划 revision。",
+    "group": "AgentLoop 进化知识点",
+    "order": 110,
+    "contentUrl": "/content/knowledge/10-replanner-revision.md",
+    "pageUrl": "/notes/agent/10-replanner-revision/"
+  },
+  {
+    "slug": "11-history-archive-restore",
+    "fileName": "11-history-archive-restore.md",
+    "title": "11 - History / Archive / Restore 任务历史设计",
+    "summary": "任务历史系统把“当前正在推进的计划”和“已经收起来的历史计划”分开。",
+    "group": "AgentLoop 进化知识点",
+    "order": 111,
+    "contentUrl": "/content/knowledge/11-history-archive-restore.md",
+    "pageUrl": "/notes/agent/11-history-archive-restore/"
+  },
+  {
+    "slug": "12-registry-pattern",
+    "fileName": "12-registry-pattern.md",
+    "title": "12 - Registry 注册表模式",
+    "summary": "注册表模式（Registry Pattern）负责把能力集中登记起来，再按名称、状态或类别查找和使用。",
+    "group": "AgentLoop 进化知识点",
+    "order": 112,
+    "contentUrl": "/content/knowledge/12-registry-pattern.md",
+    "pageUrl": "/notes/agent/12-registry-pattern/"
+  },
+  {
+    "slug": "13-hook-event-extension",
+    "fileName": "13-hook-event-extension.md",
+    "title": "13 - Hook 事件扩展点",
+    "summary": "Hook 是事件扩展点。主流程在稳定节点发出事件，外部 handler 可以订阅这些事件做日志、指标、审计、插件扩展等。",
+    "group": "AgentLoop 进化知识点",
+    "order": 113,
+    "contentUrl": "/content/knowledge/13-hook-event-extension.md",
+    "pageUrl": "/notes/agent/13-hook-event-extension/"
+  },
+  {
+    "slug": "14-adapter-pattern",
+    "fileName": "14-adapter-pattern.md",
+    "title": "14 - Adapter 适配器模式",
+    "summary": "适配器模式（Adapter Pattern）把不同外部协议转换成系统内部统一接口。",
+    "group": "AgentLoop 进化知识点",
+    "order": 114,
+    "contentUrl": "/content/knowledge/14-adapter-pattern.md",
+    "pageUrl": "/notes/agent/14-adapter-pattern/"
+  },
+  {
+    "slug": "15-runtime-facade-pattern",
+    "fileName": "15-runtime-facade-pattern.md",
+    "title": "15 - Facade 门面模式",
+    "summary": "门面模式（Facade Pattern）给复杂子系统提供一个更简单、稳定的对外入口。",
+    "group": "AgentLoop 进化知识点",
+    "order": 115,
+    "contentUrl": "/content/knowledge/15-runtime-facade-pattern.md",
+    "pageUrl": "/notes/agent/15-runtime-facade-pattern/"
+  },
+  {
+    "slug": "16-team-coordinator-mainline-migration",
+    "fileName": "16-team-coordinator-mainline-migration.md",
+    "title": "16 - TeamCoordinator 主链迁移",
+    "summary": "TeamCoordinator 的重点不是多一个接口，而是从旁路能力变成 runtime 真正依赖的主链。",
+    "group": "AgentLoop 进化知识点",
+    "order": 116,
+    "contentUrl": "/content/knowledge/16-team-coordinator-mainline-migration.md",
+    "pageUrl": "/notes/agent/16-team-coordinator-mainline-migration/"
+  },
+  {
+    "slug": "17-contract-first-runtime-coordination",
+    "fileName": "17-contract-first-runtime-coordination.md",
+    "title": "17 - 契约优先的 Runtime 协调",
+    "summary": "当系统进入多角色、审查、批处理和自动推进阶段，Runtime 需要把缺失能力变成显式契约。",
+    "group": "AgentLoop 进化知识点",
+    "order": 117,
+    "contentUrl": "/content/knowledge/17-contract-first-runtime-coordination.md",
+    "pageUrl": "/notes/agent/17-contract-first-runtime-coordination/"
+  },
+  {
+    "slug": "18-legacy-adapter-retirement",
+    "fileName": "18-legacy-adapter-retirement.md",
+    "title": "18 - Legacy Adapter 的安全退场",
+    "summary": "删除旧 adapter 的关键不是快，而是先提最小公共类型，再确认 runtime 不再依赖旧接口。",
+    "group": "AgentLoop 进化知识点",
+    "order": 118,
+    "contentUrl": "/content/knowledge/18-legacy-adapter-retirement.md",
+    "pageUrl": "/notes/agent/18-legacy-adapter-retirement/"
+  },
+  {
+    "slug": "19-cli-usecase-adapter",
+    "fileName": "19-cli-usecase-adapter.md",
+    "title": "19 - CLI 用例适配层",
+    "summary": "CLI 不是 Agent 核心，它更像外部命令到 Runtime 用例之间的适配层。",
+    "group": "AgentLoop 进化知识点",
+    "order": 119,
+    "contentUrl": "/content/knowledge/19-cli-usecase-adapter.md",
+    "pageUrl": "/notes/agent/19-cli-usecase-adapter/"
+  },
+  {
+    "slug": "20-role-agent-session-isolation",
+    "fileName": "20-role-agent-session-isolation.md",
+    "title": "20 - 角色 Agent 的独立会话隔离",
+    "summary": "worker、explorer、verifier 已经不只是标签，而是拥有独立 AgentLoop 和 SessionState 的角色执行体。",
+    "group": "AgentLoop 进化知识点",
+    "order": 120,
+    "contentUrl": "/content/knowledge/20-role-agent-session-isolation.md",
+    "pageUrl": "/notes/agent/20-role-agent-session-isolation/"
+  },
+  {
+    "slug": "21-review-policy-chain",
+    "fileName": "21-review-policy-chain.md",
+    "title": "21 - Review 策略与审查链",
+    "summary": "ReviewPolicy 只决定是否审查、谁来审、按什么顺序审，真正执行仍交给运行时链路。",
+    "group": "AgentLoop 进化知识点",
+    "order": 121,
+    "contentUrl": "/content/knowledge/21-review-policy-chain.md",
+    "pageUrl": "/notes/agent/21-review-policy-chain/"
+  },
+  {
+    "slug": "22-runnable-batch-prepare-commit",
+    "fileName": "22-runnable-batch-prepare-commit.md",
+    "title": "22 - Runnable Batch 与准备/提交分离",
+    "summary": "并行执行不是简单 Promise.all，而是先 prepare，再 run，最后统一 commit。",
+    "group": "AgentLoop 进化知识点",
+    "order": 122,
+    "contentUrl": "/content/knowledge/22-runnable-batch-prepare-commit.md",
+    "pageUrl": "/notes/agent/22-runnable-batch-prepare-commit/"
+  },
+  {
+    "slug": "23-followup-auto-drive-loop",
+    "fileName": "23-followup-auto-drive-loop.md",
+    "title": "23 - FollowUp 自动推进循环",
+    "summary": "followUp 已经不是展示文案，而是 runtime 可以读取并自动执行的下一步动作协议。",
+    "group": "AgentLoop 进化知识点",
+    "order": 123,
+    "contentUrl": "/content/knowledge/23-followup-auto-drive-loop.md",
+    "pageUrl": "/notes/agent/23-followup-auto-drive-loop/"
+  },
+  {
+    "slug": "24-task-boundary-recovery-vs-execution-journal",
+    "fileName": "24-task-boundary-recovery-vs-execution-journal.md",
+    "title": "24 - 任务边界恢复与轮内执行日志",
+    "summary": "当前项目支持任务边界恢复，但还没进入 tool call 级别的轮内精确恢复。",
+    "group": "AgentLoop 进化知识点",
+    "order": 124,
+    "contentUrl": "/content/knowledge/24-task-boundary-recovery-vs-execution-journal.md",
+    "pageUrl": "/notes/agent/24-task-boundary-recovery-vs-execution-journal/"
+  }
 ]

@@ -37,21 +37,22 @@
           </p>
           <div class="intro-actions">
             <a class="button primary" href="#progress">看当前进度</a>
+            <a class="button secondary" href="./records/">打开学习记录</a>
             <a class="button secondary" href="../notes/">打开知识库索引</a>
           </div>
         </div>
         <aside class="status-panel page-status" aria-label="当前学习状态">
           <div>
             <span class="status-label">当前阶段</span>
-            <strong>V3 已收口</strong>
+            <strong>V5 TeamCoordinator 第一版完成</strong>
           </div>
           <div>
             <span class="status-label">下一阶段</span>
-            <strong>V4 多 Agent 协作</strong>
+            <strong>V5 协调强化</strong>
           </div>
           <div>
             <span class="status-label">关联资料</span>
-            <strong>21 篇专题笔记</strong>
+            <strong>30 篇知识点 / 5 篇学习记录</strong>
           </div>
         </aside>
       </section>
@@ -96,6 +97,11 @@
             <h3>Replanner 第一版</h3>
             <p>blocked 后生成新 revision，插入解除阻塞任务，保留已完成成果。</p>
           </article>
+          <article>
+            <span>07</span>
+            <h3>TeamCoordinator 主链</h3>
+            <p>把角色执行、review、batch、followUp 和 escalation 收进统一协调链路。</p>
+          </article>
         </div>
       </section>
 
@@ -133,24 +139,32 @@
               <strong>状态：已完成</strong>
             </div>
           </li>
-          <li class="is-current">
+          <li class="is-done">
             <span>V3</span>
             <div>
               <h3>Orchestration + Snapshot</h3>
               <p>让任务能 startNext、complete、block、fail、retry、resume、archive、restore、replan。</p>
-              <strong>状态：主体完成</strong>
+              <strong>状态：已完成</strong>
             </div>
           </li>
-          <li>
+          <li class="is-done">
             <span>V4</span>
             <div>
               <h3>多 Agent 协作</h3>
-              <p>把 suggestedOwner 升级成真实 worker / explorer / verifier / coordinator 分工。</p>
-              <strong>状态：下一阶段</strong>
+              <p>把 suggestedOwner 升级成真实 worker / explorer / verifier / coordinator 分工，并让角色拥有独立 SessionState。</p>
+              <strong>状态：第一版完成</strong>
+            </div>
+          </li>
+          <li class="is-current">
+            <span>V5</span>
+            <div>
+              <h3>TeamCoordinator 协调层</h3>
+              <p>把 review plan、runnable batch、followUp 和 escalation 统一收口到团队协调主链。</p>
+              <strong>状态：主链完成，继续强化</strong>
             </div>
           </li>
           <li>
-            <span>V5</span>
+            <span>V6</span>
             <div>
               <h3>持续在线平台</h3>
               <p>接入 heartbeat、standing orders、detached task ledger 和跨入口 session routing。</p>
@@ -217,6 +231,24 @@
                 <p>看 blocked 后如何生成新 revision 并插入解除阻塞任务。</p>
               </div>
             </li>
+            <li>
+              <div>
+                <strong>src/team/default-team-coordinator.ts</strong>
+                <p>看 assignment、review、followUp、batch 和 escalation 如何统一收口。</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>src/team/default-task-executors.ts</strong>
+                <p>看 worker / explorer / verifier 如何映射到独立角色执行器。</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>src/team/default-task-review-policy.ts</strong>
+                <p>看 review plan 如何决定审查角色、顺序与并行策略。</p>
+              </div>
+            </li>
           </ol>
         </div>
       </section>
@@ -227,34 +259,34 @@
             <p class="eyebrow">Stage Logs</p>
             <h2 id="logs-title">从开始到现在的学习记录</h2>
           </div>
-          <p>短记录放在这里，详细内容继续沉淀到本地 docs 和有道云笔记。</p>
+          <p>这里现在只放阶段入口，点进去看完整学习记录；知识点拆解继续放在知识库。</p>
         </div>
         <div class="note-list">
-          <article class="note-item">
+          <a class="note-item" href="./records/01-entry-commander-cli/">
             <time datetime="2026-04-16">2026-04-16</time>
-            <h3>从 CLI 入口开始</h3>
+            <h3>01 入口层与 Commander CLI</h3>
             <p>先弄明白 Python / Node 项目如何通过工具脚本进入 main / cli 入口，再把本项目切到 Commander。</p>
-          </article>
-          <article class="note-item">
+          </a>
+          <a class="note-item" href="./records/02-config-startup-contract/">
             <time datetime="2026-04-16">2026-04-16</time>
-            <h3>补 Runtime 和生命周期</h3>
-            <p>把配置、工厂、MCP、Gateway、Hook、启动失败回滚和 dispose 统一放进 Runtime。</p>
-          </article>
-          <article class="note-item">
+            <h3>02 Config 启动契约与加载</h3>
+            <p>把默认配置、用户配置、命令行覆盖和配置校验收成启动契约。</p>
+          </a>
+          <a class="note-item" href="./records/03-runtime-composition-lifecycle/">
             <time datetime="2026-04-16">2026-04-16</time>
-            <h3>完成 V2 Planning</h3>
-            <p>设计 TaskPlan / TaskItem，让目标能拆成可执行的计划列表。</p>
-          </article>
-          <article class="note-item">
-            <time datetime="2026-04-16">2026-04-16</time>
-            <h3>完成 V3 任务闭环</h3>
-            <p>补上 TaskSnapshot、TaskStore、TaskOrchestrator、status、history、archive、restore、retry 和 replan。</p>
-          </article>
-          <article class="note-item">
-            <time datetime="2026-04-16">2026-04-16</time>
-            <h3>知识点细化</h3>
-            <p>把 21 篇知识点改成详细版，并同步到有道云笔记；源码关键链路补了中文注释。</p>
-          </article>
+            <h3>03 Runtime 装配与生命周期</h3>
+            <p>把模型、工具、记忆、MCP、Gateway、Hook、任务系统装成 RuntimeBundle。</p>
+          </a>
+          <a class="note-item" href="./records/04-task-planning-snapshot-orchestration/">
+            <time datetime="2026-04-17">2026-04-17</time>
+            <h3>04 任务计划与快照编排</h3>
+            <p>从 TaskPlan 到 TaskSnapshot、TaskStore、TaskOrchestrator 和 Replanner。</p>
+          </a>
+          <a class="note-item" href="./records/05-team-coordinator-multi-agent/">
+            <time datetime="2026-04-17">2026-04-17</time>
+            <h3>05 TeamCoordinator 与多 Agent 协作</h3>
+            <p>把角色 Agent、ReviewPolicy、Runnable Batch 和 FollowUp 收进团队协调主链。</p>
+          </a>
         </div>
       </section>
     </main>

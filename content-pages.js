@@ -177,13 +177,15 @@ function renderCategoryCards(items) {
     .join("");
 }
 
-function renderDetail(item, markdown) {
+function renderDetail(item, markdown, options = {}) {
+  const backLabel = options.backLabel ?? "回到知识点目录";
+
   return `
     <article class="knowledge-article" id="${escapeHtml(item.slug)}">
       <div class="article-label">${escapeHtml(item.group)}</div>
       ${markdownToHtml(markdown)}
       <div class="article-actions">
-        <a class="back-to-index" href="../">回到知识点目录</a>
+        <a class="back-to-index" href="../">${escapeHtml(backLabel)}</a>
       </div>
     </article>`;
 }
@@ -221,7 +223,7 @@ async function initKnowledgeDetailPage(options) {
     const item = items.find((entry) => entry.slug === options.slug);
 
     if (!item) {
-      throw new Error(`找不到知识点：${options.slug}`);
+      throw new Error(`找不到内容：${options.slug}`);
     }
 
     const markdown = await fetchText(item.contentUrl);
@@ -238,7 +240,7 @@ async function initKnowledgeDetailPage(options) {
     if (pageSummary) {
       pageSummary.textContent = item.summary;
     }
-    container.innerHTML = renderDetail(item, markdown);
+    container.innerHTML = renderDetail(item, markdown, options);
   } catch (error) {
     renderError(container, error instanceof Error ? error.message : String(error));
   }

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN" data-content-version="20260417-agent30">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="并行执行不是简单 Promise.all，而是先 prepare，再 run，最后统一 commit。" />
+    <title>22 - Runnable Batch 与准备/提交分离 | 罗辑的个人工作台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23e9544f'/%3E%3Cpath d='M18 18h10l6 14 6-14h10v28h-8V29l-6 17h-4l-6-17v17h-8z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="../../../styles.css?v=20260417-agent30" />
+  </head>
+  <body class="notes-page knowledge-page">
+    <header class="topbar" aria-label="站点导航">
+      <a class="brand" href="../../../" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>罗辑的个人工作台</span>
+      </a>
+      <nav class="topnav" aria-label="站点导航">
+        <a href="../../../#workspace">工作区</a>
+        <a href="../../../agent/">Agent 工作区</a>
+        <a href="../../../notes/" aria-current="page">知识库</a>
+        <a href="../../../toolbox/">工具箱</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero compact-hero">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../">返回知识点目录</a>
+          <p class="eyebrow" data-detail-group>AgentLoop 进化知识点</p>
+          <h1 data-detail-title>22 - Runnable Batch 与准备/提交分离</h1>
+          <p data-detail-summary>并行执行不是简单 Promise.all，而是先 prepare，再 run，最后统一 commit。</p>
+        </div>
+        <aside class="status-panel page-status" aria-label="当前知识点">
+          <div>
+            <span class="status-label">内容来源</span>
+            <strong>content/knowledge/22-runnable-batch-prepare-commit.md</strong>
+          </div>
+          <div>
+            <span class="status-label">展示方式</span>
+            <strong>运行时解析 Markdown</strong>
+          </div>
+          <div>
+            <span class="status-label">当前知识点</span>
+            <strong>22 - Runnable Batch 与准备/提交分离</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page-section light-section" aria-labelledby="detail-title">
+        <div class="section-heading">
+          <p class="eyebrow">Detail</p>
+          <h2 id="detail-title">详细内容</h2>
+          <p>当前页面不保存正文 HTML，而是在打开时读取对应的 Markdown 文件并解析展示。</p>
+        </div>
+        <div class="knowledge-detail-list" data-knowledge-detail>
+          <article class="knowledge-loading">
+            <h3>正在读取知识点内容</h3>
+            <p>稍等一下，页面正在从文件里加载详细笔记。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>22 - Runnable Batch 与准备/提交分离</p>
+      <a href="../">回到知识点目录</a>
+    </footer>
+
+    <script src="../../../script.js?v=20260417-agent30"></script>
+    <script src="../../../content-pages.js?v=20260417-agent30"></script>
+    <script>
+      window.ContentPages?.initKnowledgeDetailPage({
+        manifestUrl: '/content/knowledge/manifest.json',
+        containerSelector: '[data-knowledge-detail]',
+        slug: '22-runnable-batch-prepare-commit',
+      });
+    </script>
+  </body>
+</html>

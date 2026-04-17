@@ -20,6 +20,8 @@
   - 自动化工具箱页面
 - `content/knowledge/`
   - 知识点 Markdown 原文与 `manifest.json`
+- `content/study-records/`
+  - Agent 学习记录 Markdown 原文与 `manifest.json`
 - `styles.css`
   - 全站共享样式
 - `script.js`
@@ -33,6 +35,7 @@
 - `agent/` 只讲专题推进过程、路线和阶段记录。
 - `notes/` 只做知识库入口和资料目录。
 - 知识点正文优先放在 `content/knowledge/*.md`，页面通过清单渲染，不重复保存多份正文。
+- 学习记录正文优先放在 `content/study-records/*.md`，页面通过清单渲染，入口在 `agent/records/`。
 
 ## 本地预览
 

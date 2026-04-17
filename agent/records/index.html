@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN" data-content-version="20260417-records05">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Harness Agent Lab 学习记录目录，按阶段整理入口、配置、Runtime、任务系统和多 Agent 协作。" />
+    <title>Agent 学习记录 | 罗辑的个人工作台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23e9544f'/%3E%3Cpath d='M18 18h10l6 14 6-14h10v28h-8V29l-6 17h-4l-6-17v17h-8z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="../../styles.css?v=20260417-records05" />
+  </head>
+  <body class="notes-page knowledge-page">
+    <header class="topbar" aria-label="站点导航">
+      <a class="brand" href="../../" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>个人工作台</span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="../../#workspace">工作区</a>
+        <a href="../../agent/" aria-current="page">Agent 路线</a>
+        <a href="../../notes/">知识库</a>
+        <a href="../../toolbox/">工具箱</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero compact-hero">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../">返回 Agent 工作区</a>
+          <p class="eyebrow">Study Records</p>
+          <h1>Agent 学习记录</h1>
+          <p>这里记录每个阶段为什么要做、怎么设计、代码应该按什么顺序读。知识点拆解继续放在知识库，这里只放阶段主线。</p>
+        </div>
+        <aside class="status-panel page-status" aria-label="学习记录状态">
+          <div>
+            <span class="status-label">当前记录</span>
+            <strong>01-05</strong>
+          </div>
+          <div>
+            <span class="status-label">最新主题</span>
+            <strong>TeamCoordinator 与多 Agent 协作</strong>
+          </div>
+          <div>
+            <span class="status-label">正文来源</span>
+            <strong>Markdown 文件</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page-section" id="records" aria-labelledby="records-title">
+        <div class="section-heading">
+          <p class="eyebrow">Index</p>
+          <h2 id="records-title">按学习顺序阅读</h2>
+          <p>每篇记录都进入独立页面，再读取对应的 Markdown 原文，避免主页堆成长文。</p>
+        </div>
+        <div class="knowledge-index" data-study-record-index>
+          <article class="knowledge-loading">
+            <h3>正在读取学习记录目录</h3>
+            <p>稍等一下，页面正在从文件清单里加载内容。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Agent 学习记录</p>
+      <a href="../">回到 Agent 工作区</a>
+    </footer>
+
+    <script src="../../script.js?v=20260417-records05"></script>
+    <script src="../../content-pages.js?v=20260417-records05"></script>
+    <script>
+      window.ContentPages?.initKnowledgeIndexPage({
+        manifestUrl: "/content/study-records/manifest.json",
+        containerSelector: "[data-study-record-index]",
+      });
+    </script>
+  </body>
+</html>
