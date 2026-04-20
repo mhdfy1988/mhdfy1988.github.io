@@ -86,5 +86,16 @@
     "date": "2026-04-20",
     "contentUrl": "/content/study-records/08-logger-observability-wrapup.md",
     "pageUrl": "/agent/records/08-logger-observability-wrapup/"
+  },
+  {
+    "slug": "09-hono-gateway-mcp-sdk-prestudy",
+    "fileName": "09-hono-gateway-mcp-sdk-prestudy.md",
+    "title": "学习记录-09-Hono Gateway 与 MCP SDK 接入预研",
+    "summary": "把 Hono HTTP 入口和 MCP 官方 SDK 先做第一版边界验证，明确它们是接入层预研，不抢主体功能主线。",
+    "group": "Agent 学习记录",
+    "order": 9,
+    "date": "2026-04-20",
+    "contentUrl": "/content/study-records/09-hono-gateway-mcp-sdk-prestudy.md",
+    "pageUrl": "/agent/records/09-hono-gateway-mcp-sdk-prestudy/"
   }
 ]

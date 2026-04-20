@@ -548,5 +548,25 @@
     "order": 149,
     "contentUrl": "/content/knowledge/49-execution-journal-vs-logger.md",
     "pageUrl": "/notes/agent/49-execution-journal-vs-logger/"
+  },
+  {
+    "slug": "50-gateway-port-http-adapter",
+    "fileName": "50-gateway-port-http-adapter.md",
+    "title": "50 - GatewayPort 与 HTTP Adapter 边界",
+    "summary": "HTTP Gateway 是入口适配器，不是新的 Agent 主流程。",
+    "group": "AgentLoop 进化知识点",
+    "order": 150,
+    "contentUrl": "/content/knowledge/50-gateway-port-http-adapter.md",
+    "pageUrl": "/notes/agent/50-gateway-port-http-adapter/"
+  },
+  {
+    "slug": "51-mcp-sdk-connection-tool-adapter",
+    "fileName": "51-mcp-sdk-connection-tool-adapter.md",
+    "title": "51 - MCP SDK 连接层与 ToolAdapter",
+    "summary": "让 MCP SDK 留在基础设施层，再通过 ToolAdapter 把 MCP tool 接进项目自己的工具体系。",
+    "group": "AgentLoop 进化知识点",
+    "order": 151,
+    "contentUrl": "/content/knowledge/51-mcp-sdk-connection-tool-adapter.md",
+    "pageUrl": "/notes/agent/51-mcp-sdk-connection-tool-adapter/"
   }
 ]
