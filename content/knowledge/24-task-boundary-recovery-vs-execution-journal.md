@@ -2,7 +2,9 @@
 
 ## 先说结论
 
-当前项目已经支持“任务边界恢复”，但还没有支持“轮内精确恢复”。
+当前项目已经支持“任务边界恢复”，也有了第一版 `ExecutionJournalStore`。
+
+但要注意：它现在只是“可查询的执行流水账第一版”，还没有支持“轮内精确恢复”。
 
 这两个概念一定要分清。
 
@@ -10,6 +12,9 @@
 
 - `../../src/runtime/runtime-bundle.ts`
 - `../../src/orchestration/task-orchestrator.ts`
+- `../../src/execution-journal/index.ts`
+- `../../src/execution-journal/execution-journal-store.ts`
+- `../../src/execution-journal/in-memory-execution-journal-store.ts`
 - `../../src/task-state/file-task-store.ts`
 - `../../src/task-state/task-snapshot.ts`
 - `../../src/entry/cli.ts`
@@ -38,6 +43,24 @@ pending
 ```
 
 然后从这项任务边界重新执行。
+
+同时，Runtime 现在会把关键执行边界写进 `ExecutionJournalStore`：
+
+```text
+resume_prepared
+task_prepared
+batch_prepared
+task_committed
+```
+
+这意味着我们现在可以查询某个任务：
+
+```text
+上次是否进入执行前准备
+是否进入 batch 准备
+结果是否已经提交到 lastExecution
+resume 当前采用的恢复模式是什么
+```
 
 ## 为什么这是任务边界恢复
 
@@ -95,6 +118,18 @@ TaskPlan + PlanSnapshot
 - 哪些任务 completed / blocked / failed
 - 最近一次 lastExecution 是什么
 
+现在第一版 `ExecutionJournalStore` 会额外记录：
+
+- `phase`
+- `planId`
+- `snapshotId`
+- `taskId`
+- `traceId`
+- `runId`
+- `attemptCount`
+- `summary`
+- `payload`
+
 但它还没有保存：
 
 - AgentLoop 当前 round
@@ -132,12 +167,37 @@ TaskPlan + PlanSnapshot
 
 它可能多做一点，但状态不会假装连续。
 
+## ExecutionJournalStore 第一版做了什么
+
+第一版接口是：
+
+```text
+append(entry)
+list(query)
+listByTask(taskId)
+getLatestCheckpoint(query)
+```
+
+它解决的是：
+
+```text
+让恢复机制未来能查“某个任务上一次到达过哪个执行边界”
+```
+
+现在默认实现是：
+
+```text
+InMemoryExecutionJournalStore
+```
+
+也就是说，它已经能服务当前进程内的测试和诊断，但还不能跨进程持久化。
+
 ## 将来要补什么
 
 未来如果要做到轮内精确恢复，需要新增一层：
 
 ```text
-Execution Journal
+FileExecutionJournalStore 或数据库型 ExecutionJournalStore
 ```
 
 它至少要记录：
@@ -192,6 +252,6 @@ Execution Journal
 
 ```text
 TaskSnapshot 能恢复任务边界。
-Execution Journal 才能恢复轮内细节。
+ExecutionJournalStore 先记录恢复依据。
+真正的轮内精确恢复，还需要 tool call 级 journal 和恢复协议。
 ```
-

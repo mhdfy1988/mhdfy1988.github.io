@@ -53,5 +53,38 @@
     "date": "2026-04-17",
     "contentUrl": "/content/study-records/05-team-coordinator-multi-agent.md",
     "pageUrl": "/agent/records/05-team-coordinator-multi-agent/"
+  },
+  {
+    "slug": "06-zod-runtime-validation-protocol-boundary",
+    "fileName": "06-zod-runtime-validation-protocol-boundary.md",
+    "title": "学习记录-06-Zod 运行时校验与协议边界",
+    "summary": "把配置文件、模型输出、协作协议和文件快照这些运行时不可信数据纳入 Zod 边界校验。",
+    "group": "Agent 学习记录",
+    "order": 6,
+    "date": "2026-04-20",
+    "contentUrl": "/content/study-records/06-zod-runtime-validation-protocol-boundary.md",
+    "pageUrl": "/agent/records/06-zod-runtime-validation-protocol-boundary/"
+  },
+  {
+    "slug": "07-vitest-testing-quality-gate",
+    "fileName": "07-vitest-testing-quality-gate.md",
+    "title": "学习记录-07-Vitest 测试体系与质量门禁",
+    "summary": "把测试体系推进到 setupFiles、自定义 matcher、fixture、参数化测试、覆盖率和 CI 反馈。",
+    "group": "Agent 学习记录",
+    "order": 7,
+    "date": "2026-04-20",
+    "contentUrl": "/content/study-records/07-vitest-testing-quality-gate.md",
+    "pageUrl": "/agent/records/07-vitest-testing-quality-gate/"
+  },
+  {
+    "slug": "08-logger-observability-wrapup",
+    "fileName": "08-logger-observability-wrapup.md",
+    "title": "学习记录-08-LoggerPort 与可观察性收口",
+    "summary": "把 LoggerPort、结构化事件、trace、pino 文件日志、preset 和 ExecutionJournal 第一版收成可观察性基础。",
+    "group": "Agent 学习记录",
+    "order": 8,
+    "date": "2026-04-20",
+    "contentUrl": "/content/study-records/08-logger-observability-wrapup.md",
+    "pageUrl": "/agent/records/08-logger-observability-wrapup/"
   }
 ]

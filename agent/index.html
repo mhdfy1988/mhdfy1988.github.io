@@ -44,15 +44,15 @@
         <aside class="status-panel page-status" aria-label="当前学习状态">
           <div>
             <span class="status-label">当前阶段</span>
-            <strong>V5 TeamCoordinator 第一版完成</strong>
+            <strong>LoggerPort 可观察性收口</strong>
           </div>
           <div>
             <span class="status-label">下一阶段</span>
-            <strong>V5 协调强化</strong>
+            <strong>MCP SDK 接入</strong>
           </div>
           <div>
             <span class="status-label">关联资料</span>
-            <strong>30 篇知识点 / 5 篇学习记录</strong>
+            <strong>55 篇知识点 / 8 篇学习记录</strong>
           </div>
         </aside>
       </section>
@@ -101,6 +101,21 @@
             <span>07</span>
             <h3>TeamCoordinator 主链</h3>
             <p>把角色执行、review、batch、followUp 和 escalation 收进统一协调链路。</p>
+          </article>
+          <article>
+            <span>08</span>
+            <h3>Zod 运行时校验</h3>
+            <p>把配置、任务快照、协作协议和模型输出这些外部输入纳入 schema 校验。</p>
+          </article>
+          <article>
+            <span>09</span>
+            <h3>Vitest 测试体系</h3>
+            <p>补齐 setupFiles、matcher、fixture、coverage、CI 报告和质量门禁。</p>
+          </article>
+          <article>
+            <span>10</span>
+            <h3>LoggerPort 可观察性</h3>
+            <p>接入结构化日志、trace、脱敏、文件日志、轮转和执行日志存储。</p>
           </article>
         </div>
       </section>
@@ -160,11 +175,19 @@
             <div>
               <h3>TeamCoordinator 协调层</h3>
               <p>把 review plan、runnable batch、followUp 和 escalation 统一收口到团队协调主链。</p>
-              <strong>状态：主链完成，继续强化</strong>
+              <strong>状态：主链完成，继续强化可观察性和协作协议</strong>
             </div>
           </li>
           <li>
             <span>V6</span>
+            <div>
+              <h3>显式协作协议</h3>
+              <p>让角色之间通过 assignment、review、followUp、escalation 等结构化消息协作。</p>
+              <strong>状态：已进入设计与第一版实现</strong>
+            </div>
+          </li>
+          <li>
+            <span>V7</span>
             <div>
               <h3>持续在线平台</h3>
               <p>接入 heartbeat、standing orders、detached task ledger 和跨入口 session routing。</p>
@@ -286,6 +309,21 @@
             <time datetime="2026-04-17">2026-04-17</time>
             <h3>05 TeamCoordinator 与多 Agent 协作</h3>
             <p>把角色 Agent、ReviewPolicy、Runnable Batch 和 FollowUp 收进团队协调主链。</p>
+          </a>
+          <a class="note-item" href="./records/06-zod-runtime-validation-protocol-boundary/">
+            <time datetime="2026-04-20">2026-04-20</time>
+            <h3>06 Zod 运行时校验与协议边界</h3>
+            <p>把不可信输入从 TypeScript 静态类型推进到运行时 schema，减少配置、快照和协作协议漂移。</p>
+          </a>
+          <a class="note-item" href="./records/07-vitest-testing-quality-gate/">
+            <time datetime="2026-04-20">2026-04-20</time>
+            <h3>07 Vitest 测试体系与质量门禁</h3>
+            <p>把单元测试、夹具、matcher、coverage、CI 报告和阈值门禁沉淀成可持续的测试基础设施。</p>
+          </a>
+          <a class="note-item" href="./records/08-logger-observability-wrapup/">
+            <time datetime="2026-04-20">2026-04-20</time>
+            <h3>08 LoggerPort 与可观察性收口</h3>
+            <p>把结构化日志、事件目录、脱敏、错误序列化、Pino 文件日志和执行日志存储整合起来。</p>
           </a>
         </div>
       </section>
