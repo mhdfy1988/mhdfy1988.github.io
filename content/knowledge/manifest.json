@@ -568,5 +568,15 @@
     "order": 151,
     "contentUrl": "/content/knowledge/51-mcp-sdk-connection-tool-adapter.md",
     "pageUrl": "/notes/agent/51-mcp-sdk-connection-tool-adapter/"
+  },
+  {
+    "slug": "52-mcp-roadmap-pause-boundary",
+    "fileName": "52-mcp-roadmap-pause-boundary.md",
+    "title": "52 - MCP 后续计划与暂停边界",
+    "summary": "MCP 当前已完成第一版预研和工具接入验证，但完整能力面先暂停，后续按 resources、prompts、roots、logging 等顺序推进。",
+    "group": "AgentLoop 进化知识点",
+    "order": 152,
+    "contentUrl": "/content/knowledge/52-mcp-roadmap-pause-boundary.md",
+    "pageUrl": "/notes/agent/52-mcp-roadmap-pause-boundary/"
   }
 ]
